@@ -2,9 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather</title>
     <link href="src/style.css" rel="stylesheet" type="text/css" />
     <link
@@ -46,107 +54,46 @@
               <input
                 type="submit"
                 value="Search"
-                class="form-control btn btn-primary shadow-sm"
+                class="btn btn-primary w-100"
               />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
             </div>
           </div>
         </form>
-        <h1 id="city">Manchester</h1>
-        <ul>
-          <li id="date">Thursday 22:00</li>
-          <li id="description">Rain</li>
-        </ul>
+        <div class="overview">
+          <h1 id="city"></h1>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
         <div class="row">
-          <div class="col">
-            <img src="img/rain1.png" alt="Cloudy icon" class="weather-icon" />
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Clear" id="icon" class="float-left" />
+              <div class="float-left">
+                <strong id="temperature"></strong><span class="units"> °C</span>
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <span class="temperature" id="temperature">17</span
-            ><span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-          </div>
-
           <div class="col-6">
             <ul>
-              <li>Humidity: <span id="humidity">77 </span>%</li>
-              <li>Wind: <span id="wind">5</span>km/h</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> m/h</li>
             </ul>
           </div>
         </div>
-        <div class="futer">
-          <div class="row">
-            <div class="col">
-              <p>Fri</p>
-              <img
-                src="img/sun.png"
-                alt="weatherImg"
-                class="weatherImg"
-                width="90"
-              />
-              <p>11℃</p>
-            </div>
-            <div class="col">
-              <p>Sat</p>
-              <img
-                src="img/cloud.png"
-                alt="weatherImg1"
-                class="weatherImg"
-                width="90"
-              />
-              <p>9℃</p>
-            </div>
-            <div class="col">
-              <p>Sun</p>
-              <img
-                src="img/rain.png"
-                alt="weatherImg2"
-                class="weatherImg"
-                width="90"
-              />
-              <p>10℃</p>
-            </div>
-            <div class="col">
-              <p>Mon</p>
-              <img
-                src="img/sun.png"
-                alt="weatherImg3"
-                class="weatherImg"
-                width="90"
-              />
-              <p>12℃</p>
-            </div>
-            <div class="col">
-              <p>Tue</p>
-              <img
-                src="img/cloud.png"
-                alt="weatherImg4"
-                class="weatherImg"
-                width="90"
-              />
-              <p>11℃</p>
-            </div>
-          </div>
-        </div>
-        <small>
-          Coded by Olena Miniailo
-          <a
-            href="https://github.com/OlenaValentynivna?tab=repositories"
-            target="_blank"
-            >GITHUB</a
-          >
-        </small>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
+      <small>
+        Coded by Olena Miniailo
+        <a
+          href="https://github.com/OlenaValentynivna?tab=repositories"
+          target="_blank"
+          >GITHUB</a
+        >
+      </small>
     </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>

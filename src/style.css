@@ -83,13 +83,6 @@ li {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.weather-icon {
-  border-radius: 50px;
-  height: 64px;
-  width: 64px;
-  margin: 0 30px;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -97,15 +90,56 @@ li {
   margin-left: -5px;
 }
 
-.futer {
-  position: relative;
-  margin: 0 50px;
-  align-self: auto;
-  padding: 50px 0 0 0;
-}
-.weatherImg {
-  border-radius: 10px;
-}
 .search-form {
   margin-bottom: 10px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 76px;
+}
+
+.weather-temperature strong {
+  color: darkblue;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: darkblue;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: darkblue;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
