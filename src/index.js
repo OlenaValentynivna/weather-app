@@ -189,7 +189,7 @@ function handleSubmit(event) {
 function CurrentPositionWeather(position) {
   let currentLongitude = position.coords.longitude;
   let currentLatitude = position.coords.latitude;
-  let apiKey = "f48290bo64bt17bab9a1b6c6eb3dae46";
+  let apiKey = "t96b3c00fa5ob67a2e1427a051f826a7";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${currentLongitude}&lat=${currentLatitude}&key=${apiKey}`;
   axios.get(apiUrl).then(displayTemperature);
 }
