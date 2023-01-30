@@ -29,8 +29,18 @@ li {
   list-style: none;
   color: #016fc5;
 }
-@media (max-width: 450px) {
+@media (max-width: 576px) {
+  h1 {
+    font-size: 18px;
+  }
   li {
+    font-size: 10px;
+  }
+  #displayedTemperature {
+    font-size: 24px;
+  }
+  #celsius-link,
+  #fahrenheit-link {
     font-size: 10px;
   }
   #search-form {
@@ -46,7 +56,23 @@ li {
     font-size: 8px;
     padding: 3px 5px;
   }
+  .weather-forecast-date {
+    font-size: 8px;
+  }
+  .futer-img {
+    width: 42px;
+  }
+  #wind {
+    font-size: 10px;
+  }
+  #humidity {
+    font-size: 10px;
+  }
+  .weather-forecast-temperature {
+    font-size: 10px;
+  }
 }
+
 small,
 a {
   color: #fff;
